@@ -15,6 +15,7 @@
 		2DF598621BD7346D00758391 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF598601BD7346D00758391 /* LaunchScreen.storyboard */; };
 		2DF5986D1BD7346D00758391 /* TryUIAlertViewBlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF5986C1BD7346D00758391 /* TryUIAlertViewBlockTests.m */; };
 		2DF598781BD7346D00758391 /* TryUIAlertViewBlockUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF598771BD7346D00758391 /* TryUIAlertViewBlockUITests.m */; };
+		D004CB5F8AB850DE42DF05CF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 614EFD08707AAFFBC3211855 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		2DF598731BD7346D00758391 /* TryUIAlertViewBlockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryUIAlertViewBlockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF598771BD7346D00758391 /* TryUIAlertViewBlockUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TryUIAlertViewBlockUITests.m; sourceTree = "<group>"; };
 		2DF598791BD7346D00758391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		614EFD08707AAFFBC3211855 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3F3A62685470F67BCDDD460 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F9CA38865D1BAE99DF8EB322 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D004CB5F8AB850DE42DF05CF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				2DF5986B1BD7346D00758391 /* TryUIAlertViewBlockTests */,
 				2DF598761BD7346D00758391 /* TryUIAlertViewBlockUITests */,
 				2DF598501BD7346D00758391 /* Products */,
+				EA0A2D960978207762C8D473 /* Pods */,
+				9BCB44AD5BA89D49E430AAB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +147,23 @@
 			path = TryUIAlertViewBlockUITests;
 			sourceTree = "<group>";
 		};
+		9BCB44AD5BA89D49E430AAB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				614EFD08707AAFFBC3211855 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA0A2D960978207762C8D473 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9CA38865D1BAE99DF8EB322 /* Pods.debug.xcconfig */,
+				F3F3A62685470F67BCDDD460 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DF5987C1BD7346D00758391 /* Build configuration list for PBXNativeTarget "TryUIAlertViewBlock" */;
 			buildPhases = (
+				9C7904F82BC1F7E222A482C2 /* Check Pods Manifest.lock */,
 				2DF5984B1BD7346D00758391 /* Sources */,
 				2DF5984C1BD7346D00758391 /* Frameworks */,
 				2DF5984D1BD7346D00758391 /* Resources */,
+				84F21D87D4B62427CEEE2B3D /* Embed Pods Frameworks */,
+				F5C6DD9466A6FD27E695FC44 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +291,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		84F21D87D4B62427CEEE2B3D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C7904F82BC1F7E222A482C2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F5C6DD9466A6FD27E695FC44 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2DF5984B1BD7346D00758391 /* Sources */ = {
@@ -409,6 +484,7 @@
 		};
 		2DF5987D1BD7346D00758391 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9CA38865D1BAE99DF8EB322 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TryUIAlertViewBlock/Info.plist;
@@ -420,6 +496,7 @@
 		};
 		2DF5987E1BD7346D00758391 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3F3A62685470F67BCDDD460 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TryUIAlertViewBlock/Info.plist;
@@ -496,6 +573,7 @@
 				2DF5987E1BD7346D00758391 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DF5987F1BD7346D00758391 /* Build configuration list for PBXNativeTarget "TryUIAlertViewBlockTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +582,7 @@
 				2DF598811BD7346D00758391 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DF598821BD7346D00758391 /* Build configuration list for PBXNativeTarget "TryUIAlertViewBlockUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +591,7 @@
 				2DF598841BD7346D00758391 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
